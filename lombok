@@ -1,0 +1,15 @@
+@Setter : setOO 등을 생성하지 않고 만들 수 있다.
+@Getter : getOO 등을 생성하지 않고 만들 수 잇다.
+@Data : setOO 또는 getOO 등을 생성하지 않고 만들 수 있다.
+
+@Builder : 원하는 부분만 입력받을 수 있도록 도와준다.
+ex)
+public Member(int id, String name, String email){
+  super();
+  this.id = id;
+	this.username = username;
+	this.email = email;
+}
+일 경우
+Member m = Member.builder().username("ssar").email("ssar@nate.com").build();
+이런식으로 원하는 부분만 사용이 가능하다.
