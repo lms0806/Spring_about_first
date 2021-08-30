@@ -7,9 +7,10 @@ ex)
 public Member(int id, String name, String email){
   super();
   this.id = id;
-	this.username = username;
-	this.email = email;
+  this.username = username;
+  this.email = email;
 }
 일 경우
 Member m = Member.builder().username("ssar").email("ssar@nate.com").build();
 이런식으로 원하는 부분만 사용이 가능하다.
+또한 특정 부분에 무엇을 넣어야 할지 기억못할 경우에도 사용하기 용의하다.
