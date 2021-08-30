@@ -1,6 +1,6 @@
 @Setter : setOO 등을 생성하지 않고 만들 수 있다.
 @Getter : getOO 등을 생성하지 않고 만들 수 잇다.
-@Data : setOO 또는 getOO 등을 생성하지 않고 만들 수 있다.
+@Data : setOO 또는 getOO 등을 생성하지 않고 만들 수 있다.(왠만해서는 사용금지)
 
 @Builder : 원하는 부분만 입력받을 수 있도록 도와준다.
 ex)
