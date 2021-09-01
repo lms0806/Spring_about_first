@@ -1,0 +1,8 @@
+use-new-id-generator-mappings : JPA가 사용하는 넘버링 방식을 따라간다 = true, 안따라간다 = false;
+
+ddl-auto : 테이블 생성에 대한 질문
+create = 프로젝트를 실행할 때마다 새로 만들겠다
+update = 테이블을 새로 만들지 않고 업데이트
+
+show-sql : sql구문을 console에 보여준다 (true, false)
+hibernate.format_sql : sql문을 정렬해서 보여줌
