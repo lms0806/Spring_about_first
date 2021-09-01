@@ -6,3 +6,7 @@ update = 테이블을 새로 만들지 않고 업데이트
 
 show-sql : sql구문을 console에 보여준다 (true, false)
 hibernate.format_sql : sql문을 정렬해서 보여줌
+
+nameig : 
+physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl = 변수명 그대로 테이블에 넣어준다
+physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy = 대문자를 소문자로 바꾸고 앞에 _를 추가한다.
