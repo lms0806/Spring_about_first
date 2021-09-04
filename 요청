@@ -1,0 +1,4 @@
+1. get 요청 : body로 데이터를 담아 보내지 않음.
+2. post, put, delete 요청 : 자바스크립트로 ajax 요청 + 데이터는 json으로 통일
+
+form:form 태그 : get, post, put, delete 요청 가능 
