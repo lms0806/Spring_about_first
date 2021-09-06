@@ -1,0 +1,4 @@
+readcommit
+
+하나의 트랜잭션이 실행한 후 update를 통해 db의 내용은 바뀌지만 commit이 되지 않은 상황이라 select를 해도 update를 거치지않은 데이터들만 commit이 될 때까지 계속해서 나오게 된다.
+undo 영역에 update 되기 전의 내용을 담아둬 select시에 undo영역의 내용을 가져온다. 그러나 commit 후에는 undo의 영역을 update해줘 select시 update된 내용을 가져오게 된다.
