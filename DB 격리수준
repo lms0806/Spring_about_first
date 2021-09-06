@@ -1,4 +1,15 @@
-readcommit
-
+1. read commit
 하나의 트랜잭션이 실행한 후 update를 통해 db의 내용은 바뀌지만 commit이 되지 않은 상황이라 select를 해도 update를 거치지않은 데이터들만 commit이 될 때까지 계속해서 나오게 된다.
 undo 영역에 update 되기 전의 내용을 담아둬 select시에 undo영역의 내용을 가져온다. 그러나 commit 후에는 undo의 영역을 update해줘 select시 update된 내용을 가져오게 된다.
+
+2. read commit의 정합성 문제
+Phantom read(데이터가 보였다 안보였다) : 하나의 트랜잭션이 실행되서 끝날때까지 같은 값이 나오는게 아니라 값이 나오지가 않는 경우 -> 정합성이 깨짐
+
+read commit 해결 : repeatable read방식
+
+3. Mysql 격리수준
+Mysql -> InnoDB 스토리지 엔진 -> Repeatable read 이상 사용 -> 부정합 발생 x -> 트랜잭션이 실행되서 끝날때까지 같은 값이 나오게 된다.
+트랜잭션이 실행 된 후 다른 트랜잭션이 commit되고 자신 트랜잭션의 번호보다 낮은 undo 로그만 보고 실행하게 된다.
+
+4. 스프링에서
+CRUD(insert, select, update, delete)할 때 보통 CUD할 때만 트랜잭션을 사용하는데 정확성을 위하여 R을 할때도 트랜잭션을 사용하게 해야 한다.
