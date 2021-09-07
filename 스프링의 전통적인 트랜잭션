@@ -1,0 +1,13 @@
+스프링 시작
+1. 톰캣 시작 - 서버작동
+2. web.xml
+3. context.xml -> DB에 연결 테스트
+3.1 request 요청
+3.2 web.xml : DB 연결 세션 생성, 트랜잭션 시작
+3.3 필터
+3.4 스프링 컨테이너 : Controller(요청 확인) -> Service(요청에 맞는 서비스 호출) -> repository(CRUD) 
+3.4 영속성 컨텍스트
+3.5 DB
+3.6 영속성 컨텍스트 : 트랜잭션 종료 후 변경감지 flush
+3.7 스프링 컨텍스트 : 트랜잭션 종료, DB연결 세션 종료
+3.8 response
