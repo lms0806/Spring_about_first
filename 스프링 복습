@@ -1,0 +1,18 @@
+스프링 동작 구동
+
+1. 톰캣 시작
+2. 필터
+3. 디스패처 : 여러 주소를 확인하여 주소에 맞는 컨트롤러에 요청
+
+Controller, Service, JPA repository, 영속성 컨텍스트 는 요청이 들어올 때 마다 스레드를 추가해서 지속적으로 생성
+4. Controller
+5. Service
+6. JPA repository
+7. 영속성 컨텍스트
+8. DataSource : 요청이 들어오지 않아도 생성
+9. DB
+
+ViewResolver, 세션, 인터셉터는 시작될때 생성
+
+ViewResolver : 페이지를 만들어서 응답, 컨트롤러가 일반적인 컨트롤러일 때 작동
+인터셉터 : 요청이 들어왔을 때 권한이 있는지 체크함
