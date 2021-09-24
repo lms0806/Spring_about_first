@@ -1,0 +1,7 @@
+OAuth = Open Auth : 인증 처리를 대신 해줌
+리소스 오너
+클라이언트
+인증서버
+리소스서버
+
+스프링 공식 OAuth 주체 : Facebook, google
