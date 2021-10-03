@@ -1,0 +1,5 @@
+header에 httpBasic 방식으로 보내게 되면 ID랑 PW를 암호화 할 수가 없어서 https 방식으로 보내야한다.
+
+Authorization : Bearer방식(ID랑 PW를 이용해서 토큰을 만듬)
+토큰은 유효시간을 가지고 있어 노출이 되어도 유효시간을 지나면 새로운 토큰을 만듬
+토큰을 만들 때 JWT 방식을 사용할 예정이라 세션방식x, 기존인증방식(httpBasic) x
